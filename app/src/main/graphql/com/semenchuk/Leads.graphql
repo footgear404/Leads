@@ -1,0 +1,24 @@
+query Leads($pagination: PaginationInput!) {
+    fetchLeads(pagination: $pagination) {
+        cursor
+        hasMore
+        totalCount
+        data {
+            birthDate
+            budget
+            createdAt
+            displayName
+            displaySource
+            firstName
+            id
+            itemType
+            lastName
+            personId
+            quality
+            secondName
+            seen
+            sourceDetails
+            updatedAt
+        }
+    }
+}

@@ -4,21 +4,28 @@ query Leads($pagination: PaginationInput!) {
         hasMore
         totalCount
         data {
-            birthDate
-            budget
-            createdAt
-            displayName
-            displaySource
-            firstName
             id
-            itemType
+            avatar {
+                thumbnail
+                id
+                path
+            }
+            country {
+                id
+                title
+                emoji
+                phoneCode
+            }
+            status {
+                id
+                title
+                color
+                backgroundColor
+            }
+            displayName
+            firstName
             lastName
-            personId
-            quality
             secondName
-            seen
-            sourceDetails
-            updatedAt
         }
     }
 }

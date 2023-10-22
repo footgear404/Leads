@@ -1,6 +1,7 @@
 package com.semenchuk.leads.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -20,9 +21,9 @@ fun SquareButtonWithIcon(
 ) {
     IconButton(
         modifier = Modifier
-            .size(40.dp)
+            .padding(10.dp)
             .background(LeadsTheme.colors.gray_100, shape = shapes.small),
-        onClick = { onClick("") }
+        onClick = { onClick("home") }
     ) {
         Icon(
             modifier = Modifier.size(20.dp),

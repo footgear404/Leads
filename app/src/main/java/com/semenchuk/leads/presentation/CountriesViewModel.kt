@@ -3,7 +3,7 @@ package com.semenchuk.leads.presentation
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.semenchuk.leads.domain.GetCountriesUseCase
+import com.semenchuk.leads.domain.usecases.GetCountriesUseCase
 import com.semenchuk.leads.domain.models.Country
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

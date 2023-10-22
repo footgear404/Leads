@@ -1,4 +1,4 @@
-package com.semenchuk.leads.presentation
+package com.semenchuk.leads.ui.screens
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

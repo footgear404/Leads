@@ -10,16 +10,16 @@ import com.semenchuk.leads.domain.utils.RouteConstants.CHAT
 import com.semenchuk.leads.domain.utils.RouteConstants.HOME
 import com.semenchuk.leads.domain.utils.RouteConstants.LEADS
 import com.semenchuk.leads.domain.utils.RouteConstants.MORE
-import com.semenchuk.leads.presentation.CountriesScreen
-import com.semenchuk.leads.presentation.HomeScreen
-import com.semenchuk.leads.presentation.LeadsScreen
+import com.semenchuk.leads.ui.screens.CountriesScreen
+import com.semenchuk.leads.ui.screens.HomeScreen
+import com.semenchuk.leads.ui.screens.leads.LeadsScreen
 
 
 @Composable
 fun AppNavGraph(
     navHostController: NavHostController,
 ) {
-    NavHost(navController = navHostController, startDestination = HOME) {
+    NavHost(navController = navHostController, startDestination = LEADS) {
         composable(HOME) { HomeScreen() }
         composable(CALLS) { }
         composable(CHAT) { CountriesScreen() }

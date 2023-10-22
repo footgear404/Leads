@@ -86,4 +86,13 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-compose:3.5.0")
     implementation("io.insert-koin:koin-android:3.5.0")
 
+//    LivePreview composable
+    val composeBom = platform("androidx.compose:compose-bom:2023.10.00")
+    implementation(composeBom)
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+//    Img
+    implementation("io.coil-kt:coil-compose:2.3.0")
+
 }

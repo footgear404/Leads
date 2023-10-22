@@ -3,9 +3,7 @@ package com.semenchuk.leads
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import com.semenchuk.leads.presentation.App
+import com.semenchuk.leads.presentation.AppEntryPoint
 import com.semenchuk.leads.ui.theme.LeadsTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LeadsTheme {
-                App()
+                AppEntryPoint()
             }
         }
     }

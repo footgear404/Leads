@@ -1,9 +1,9 @@
-package com.semenchuk.leads.presentation
+package com.semenchuk.leads.ui.screens.leads
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.semenchuk.leads.domain.GetLeadsUseCase
+import com.semenchuk.leads.domain.usecases.GetLeadsUseCase
 import com.semenchuk.leads.domain.models.LeadsPaginated
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,6 +19,7 @@ class LeadScreenViewModel(
     val state get() = _state.asStateFlow()
 
     init {
+        Log.d("LSVM", "isInit: true ")
         viewModelScope.launch {
             _state.update {
                 it.copy(

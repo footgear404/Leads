@@ -4,6 +4,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 data class AppColors(
+    val black: Color,
     val gray_100: Color,
     val more: Color,
     val notChoice: Color,
@@ -20,11 +21,12 @@ data class AppColors(
     val textButton: Color,
     val background: Color,
     val error: Color,
-    val colorTest: Color
+    val colorTest: Color,
 )
 
 val lightPalette = AppColors(
-    gray_100 = Color(0xFFECECEC),
+    black = Color(0xFF000000),
+    gray_100 = Color(0xFFf5f5f5),
     notChoice = Color(0xFF35DAF0),
     choice = Color(0xFF9FA3A0),
     select = Color(0xFF0B5DA3),

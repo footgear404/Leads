@@ -1,8 +1,8 @@
 package com.semenchuk.leads.domain.models
 
-data class Country(
+data class Status(
     val id: Int,
     val title: String,
-    val emoji: String?,
-    val phoneCode: String,
+    val color: String,
+    val backgroundColor: String,
 )

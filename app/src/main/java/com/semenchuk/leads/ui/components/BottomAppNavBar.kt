@@ -49,7 +49,7 @@ fun BottomAppNavBar(navController: NavController) {
                 .padding(horizontal = 16.dp, vertical = 8.dp)
                 .fillMaxWidth()
                 .fillMaxHeight(),
-            horizontalArrangement = Arrangement.SpaceAround, // Центрирование элементов
+            horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
             items.forEach {
@@ -63,9 +63,9 @@ fun BottomAppNavBar(navController: NavController) {
                     label = {
                         Text(fontSize = 12.sp, text = it.title)
                     },
-                    selected = currentRoute == it.screen_route,
+                    selected = currentRoute == it.screenRoute,
                     onClick = {
-                        navController.navigate(it.screen_route)
+                        navController.navigate(it.screenRoute)
                     }
                 )
             }

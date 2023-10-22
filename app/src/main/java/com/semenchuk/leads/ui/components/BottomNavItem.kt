@@ -2,7 +2,11 @@ package com.semenchuk.leads.ui.components
 
 import com.semenchuk.leads.R
 
-sealed class BottomNavItem(var title: String, var icon: Int, var screen_route: String) {
+sealed class BottomNavItem(
+    var title: String,
+    var icon: Int,
+    var screenRoute: String,
+) {
 
     object Home : BottomNavItem("Home", R.drawable.home_ico, "home")
     object Calls : BottomNavItem("Calls", R.drawable.calls_ico, "calls")

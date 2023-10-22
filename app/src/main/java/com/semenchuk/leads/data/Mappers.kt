@@ -2,19 +2,17 @@ package com.semenchuk.leads.data
 
 import com.semenchuk.leads.CountriesQuery
 import com.semenchuk.leads.LeadsQuery
+import com.semenchuk.leads.domain.models.Avatar
 import com.semenchuk.leads.domain.models.Country
 import com.semenchuk.leads.domain.models.Lead
 import com.semenchuk.leads.domain.models.LeadsPaginated
-import com.semenchuk.leads.type.DateTime
+import com.semenchuk.leads.domain.models.Status
 
 fun CountriesQuery.FetchCountry.toCountry(): Country {
     return Country(
-        adWordsCode = adWordsCode,
         emoji = emoji,
         id = id,
         phoneCode = phoneCode,
-        shortCode1 = shortCode1,
-        shortCode2 = shortCode2,
         title = title,
     )
 }
@@ -31,20 +29,39 @@ fun LeadsQuery.FetchLeads.toLeads(): LeadsPaginated {
 
 fun LeadsQuery.Data1.toLead(): Lead {
     return Lead(
-        birthDate = birthDate as DateTime,
-        budget = budget,
-        createdAt = createdAt as DateTime,
-        displayName = displayName,
-        displaySource = displaySource,
-        firstName = firstName,
         id = id,
-        itemType = itemType,
+        displayName = displayName,
+        firstName = firstName,
         lastName = lastName,
-        personId = personId,
-        quality = quality,
         secondName = secondName,
-        seen = seen,
-        sourceDetails = sourceDetails,
-        updatedAt = updatedAt as DateTime,
+        avatar = avatar?.toAvatar(),
+        country = country?.toCountry(),
+        status = status?.toStatus()
+    )
+}
+
+fun LeadsQuery.Avatar.toAvatar(): Avatar {
+    return Avatar(
+        id = id,
+        thumbnail = thumbnail,
+        path = path,
+    )
+}
+
+fun LeadsQuery.Status.toStatus(): Status {
+    return Status(
+        id = id,
+        title = title,
+        color = color,
+        backgroundColor = backgroundColor
+    )
+}
+
+fun LeadsQuery.Country.toCountry(): Country {
+    return Country(
+        id = id,
+        title = title,
+        emoji = emoji,
+        phoneCode = phoneCode,
     )
 }

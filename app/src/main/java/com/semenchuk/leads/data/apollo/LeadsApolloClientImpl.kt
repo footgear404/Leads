@@ -2,11 +2,13 @@ package com.semenchuk.leads.data.apollo
 
 import com.apollographql.apollo3.ApolloClient
 import com.semenchuk.leads.CountriesQuery
+import com.semenchuk.leads.CreateLeadMutation
 import com.semenchuk.leads.LeadsQuery
 import com.semenchuk.leads.data.toCountry
 import com.semenchuk.leads.data.toLeads
 import com.semenchuk.leads.domain.LeadsApolloClient
 import com.semenchuk.leads.domain.models.Country
+import com.semenchuk.leads.domain.models.Lead
 import com.semenchuk.leads.domain.models.LeadsPaginated
 import com.semenchuk.leads.type.PaginationInput
 
@@ -40,4 +42,14 @@ class LeadsApolloClientImpl(
             totalCount = 0
         )
     }
+
+//    override suspend fun createLead(): Lead {
+//        return apolloClient.mutation(
+//            CreateLeadMutation.CreateLead(
+//
+//            )
+//                .data
+//
+//        )
+//    }
 }

@@ -59,7 +59,7 @@ fun LeadsScreen(
         Button(
             type = ButtonType.ROUTE(
                 path = RouteConstants.ADD_LEAD,
-                icon = R.drawable.leads_ico
+                icon = R.drawable.user_plus
             )
         ),
         Button(

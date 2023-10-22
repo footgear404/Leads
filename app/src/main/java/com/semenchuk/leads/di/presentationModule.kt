@@ -1,5 +1,6 @@
 package com.semenchuk.leads.di
 
+import com.semenchuk.leads.MainActivity
 import com.semenchuk.leads.domain.usecases.GetCountriesUseCase
 import com.semenchuk.leads.domain.usecases.GetLeadsUseCase
 import com.semenchuk.leads.presentation.CountriesViewModel
@@ -14,5 +15,9 @@ val presentationModule = module {
 
     viewModel<LeadScreenViewModel> {
         LeadScreenViewModel(getLeadsUseCase = get<GetLeadsUseCase>())
+    }
+
+    single<MainActivity> {
+        MainActivity()
     }
 }

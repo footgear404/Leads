@@ -1,0 +1,28 @@
+mutation CreateLead($params: CreateLeadInput!) {
+    createLead(params: $params) {
+        data {
+            id
+            avatar {
+                id
+                thumbnail
+                path
+            },
+            country {
+                id
+                title
+                emoji
+                phoneCode
+            }
+            status {
+                id
+                title
+                color
+                backgroundColor
+            }
+            displayName
+            firstName
+            lastName
+            secondName
+        }
+    }
+}

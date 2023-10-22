@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Leads</string>
+    <string name="ex">Ex: %1$s</string>
 </resources>

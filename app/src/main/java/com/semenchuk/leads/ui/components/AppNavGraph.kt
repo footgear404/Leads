@@ -12,6 +12,7 @@ import com.semenchuk.leads.domain.utils.RouteConstants.LEADS
 import com.semenchuk.leads.domain.utils.RouteConstants.MORE
 import com.semenchuk.leads.ui.screens.CountriesScreen
 import com.semenchuk.leads.ui.screens.HomeScreen
+import com.semenchuk.leads.ui.screens.leads.CreateLeadScreen
 import com.semenchuk.leads.ui.screens.leads.LeadsScreen
 
 
@@ -24,7 +25,12 @@ fun AppNavGraph(
         composable(CALLS) { }
         composable(CHAT) { CountriesScreen() }
         composable(LEADS) { LeadsScreen(navController = navHostController) }
-        composable(ADD_LEAD) { LeadsScreen(navController = navHostController) }
+        composable(ADD_LEAD) {
+            CreateLeadScreen(
+                title = "Create lead",
+                navController = navHostController
+            )
+        }
         composable(MORE) { }
     }
 }

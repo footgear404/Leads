@@ -26,7 +26,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 
 @Composable
 fun BottomAppNavBar(navController: NavController) {
-    val items = listOf(
+    val menuItems = listOf(
         BottomNavItem.Home,
         BottomNavItem.Calls,
         BottomNavItem.Chat,
@@ -53,7 +53,7 @@ fun BottomAppNavBar(navController: NavController) {
             horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            items.forEach {
+            menuItems.forEach {
                 NavigationBarItem(
                     icon = {
                         Icon(

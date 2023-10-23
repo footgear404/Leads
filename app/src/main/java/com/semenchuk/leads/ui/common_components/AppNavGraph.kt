@@ -23,9 +23,7 @@ fun AppNavGraph(
         composable(CALLS) { }
         composable(CHAT) { }
         composable(LEADS) { LeadsScreen(navController = navHostController) }
-        composable(ADD_LEAD) {
-            CreateLeadScreen()
-        }
+        composable(ADD_LEAD) { CreateLeadScreen() }
         composable(MORE) { }
     }
 }

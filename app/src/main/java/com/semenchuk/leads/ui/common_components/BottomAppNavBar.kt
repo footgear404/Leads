@@ -1,4 +1,4 @@
-package com.semenchuk.leads.ui.components
+package com.semenchuk.leads.ui.common_components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -61,7 +62,7 @@ fun BottomAppNavBar(navController: NavController) {
                         )
                     },
                     label = {
-                        Text(fontSize = 12.sp, text = it.title)
+                        Text(fontSize = 12.sp, text = stringResource(id = it.title))
                     },
                     selected = currentRoute == it.screenRoute,
                     onClick = {

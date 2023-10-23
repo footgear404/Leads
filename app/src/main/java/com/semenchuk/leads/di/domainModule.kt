@@ -1,20 +1,23 @@
 package com.semenchuk.leads.di
 
-import com.semenchuk.leads.domain.usecases.GetCountriesUseCase
-import com.semenchuk.leads.domain.usecases.GetLeadsUseCase
+import com.semenchuk.leads.domain.CreateLeadsRepository
 import com.semenchuk.leads.domain.LeadsApolloClient
+import com.semenchuk.leads.domain.usecases.CreteLeadUseCase
+import com.semenchuk.leads.domain.usecases.GetLeadsUseCase
 import org.koin.dsl.module
 
 val domainModule = module {
-    single<GetCountriesUseCase> {
-        GetCountriesUseCase(
-            leadsApolloClient = get<LeadsApolloClient>()
-        )
-    }
 
     single<GetLeadsUseCase> {
         GetLeadsUseCase(
             leadsApolloClient = get<LeadsApolloClient>()
         )
     }
+
+    single<CreteLeadUseCase> {
+        CreteLeadUseCase(
+            createLeadsRepository = get<CreateLeadsRepository>()
+        )
+    }
+
 }

@@ -1,8 +1,8 @@
 package com.semenchuk.leads.domain.models
 
-data class Country(
+data class Language(
     override val id: Int,
+    val countries: List<Country>,
+    val shortCode: String,
     override val title: String,
-    val emoji: String?,
-    val phoneCode: String,
 ) : DropDownWidgetType

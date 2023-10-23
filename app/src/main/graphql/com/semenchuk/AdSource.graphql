@@ -1,0 +1,6 @@
+query AdSource {
+    fetchAdSources {
+        id
+        title
+    }
+}

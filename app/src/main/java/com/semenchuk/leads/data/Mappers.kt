@@ -1,10 +1,16 @@
 package com.semenchuk.leads.data
 
+import com.semenchuk.leads.AdSourceQuery
 import com.semenchuk.leads.CountriesQuery
+import com.semenchuk.leads.LanguagesQuery
+import com.semenchuk.leads.LeadIntentionQuery
 import com.semenchuk.leads.LeadsQuery
+import com.semenchuk.leads.domain.models.AdSource
 import com.semenchuk.leads.domain.models.Avatar
 import com.semenchuk.leads.domain.models.Country
+import com.semenchuk.leads.domain.models.Language
 import com.semenchuk.leads.domain.models.Lead
+import com.semenchuk.leads.domain.models.LeadIntentionType
 import com.semenchuk.leads.domain.models.LeadsPaginated
 import com.semenchuk.leads.domain.models.Status
 
@@ -64,4 +70,39 @@ fun LeadsQuery.Country.toCountry(): Country {
         emoji = emoji,
         phoneCode = phoneCode,
     )
+}
+
+fun LeadIntentionQuery.FetchLeadIntentionType.toLeadIntentionType(): LeadIntentionType {
+    return LeadIntentionType(
+        id = id,
+        title = title
+    )
+}
+
+fun AdSourceQuery.FetchAdSource.toAdSource(): AdSource {
+    return AdSource(
+        id = id,
+        title = title
+    )
+}
+
+fun LanguagesQuery.Language.toLanguage(): Language {
+    return Language(
+        id = id,
+        countries = countries?.map {
+            it.toCountry()
+        } ?: emptyList(),
+        shortCode = shortCode,
+        title = title
+    )
+}
+
+fun LanguagesQuery.Country.toCountry(): Country {
+    return Country(
+        id = id,
+        title = title,
+        emoji = emoji,
+        phoneCode = phoneCode,
+    )
+
 }

@@ -1,4 +1,4 @@
-package com.semenchuk.leads.ui.components
+package com.semenchuk.leads.ui.common_components
 
 sealed class NavItem(
     val title: String,

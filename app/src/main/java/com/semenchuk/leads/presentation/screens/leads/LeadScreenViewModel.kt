@@ -1,4 +1,4 @@
-package com.semenchuk.leads.ui.screens.leads
+package com.semenchuk.leads.presentation.screens.leads
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
@@ -19,14 +19,12 @@ class LeadScreenViewModel(
     val state get() = _state.asStateFlow()
 
     init {
-        Log.d("LSVM", "isInit: true ")
         viewModelScope.launch {
             _state.update {
                 it.copy(
                     isLoading = true
                 )
             }
-            delay(2000)
             _state.update {
                 it.copy(
                     leads = getLeadsUseCase.execute(),

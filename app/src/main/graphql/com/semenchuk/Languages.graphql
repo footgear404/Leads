@@ -1,0 +1,13 @@
+query Languages {
+    languages {
+        countries {
+            id,
+            title,
+            emoji,
+            phoneCode,
+        }
+        id
+        shortCode
+        title
+    }
+}

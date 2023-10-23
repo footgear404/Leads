@@ -1,4 +1,4 @@
-package com.semenchuk.leads.presentation.components
+package com.semenchuk.leads.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
@@ -12,7 +12,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.semenchuk.leads.R
 import com.semenchuk.leads.domain.utils.RouteConstants.ADD_LEAD
-import com.semenchuk.leads.ui.components.NavItem
 import com.semenchuk.leads.ui.theme.LeadsTheme
 import com.semenchuk.leads.ui.theme.shapes
 

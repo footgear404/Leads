@@ -1,4 +1,4 @@
-package com.semenchuk.leads.ui.screens.leads
+package com.semenchuk.leads.presentation.screens.leads
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -39,11 +39,11 @@ import com.semenchuk.leads.domain.models.Country
 import com.semenchuk.leads.domain.models.Lead
 import com.semenchuk.leads.domain.models.Status
 import com.semenchuk.leads.domain.utils.RouteConstants
-import com.semenchuk.leads.presentation.components.Button
-import com.semenchuk.leads.presentation.components.ButtonType
-import com.semenchuk.leads.presentation.components.CircularFlagEmoji
-import com.semenchuk.leads.presentation.components.LeadStatusBadgeItem
-import com.semenchuk.leads.presentation.components.TopAppBar
+import com.semenchuk.leads.ui.components.Button
+import com.semenchuk.leads.ui.components.ButtonType
+import com.semenchuk.leads.ui.components.CircularFlagEmoji
+import com.semenchuk.leads.ui.components.LeadStatusBadgeItem
+import com.semenchuk.leads.ui.components.TopAppBar
 import com.semenchuk.leads.ui.theme.LeadsTheme
 import com.semenchuk.leads.ui.utils.color
 import org.koin.androidx.compose.koinViewModel

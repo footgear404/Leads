@@ -1,4 +1,4 @@
-package com.semenchuk.leads.presentation.components
+package com.semenchuk.leads.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
